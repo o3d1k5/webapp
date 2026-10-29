@@ -1,0 +1,286 @@
+
+/* =========================
+   RESET DAN DASAR
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f5f9;
+    color: #334155;
+    line-height: 1.7;
+}
+
+/* =========================
+   HEADER / PROFIL
+========================= */
+
+.hero {
+    background: linear-gradient(135deg, #10243a, #2563eb);
+    color: white;
+    padding: 40px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.profile-img {
+    width: 145px;
+    height: 145px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+
+.profile-info h1 {
+    font-size: 32px;
+    margin-bottom: 4px;
+}
+
+.job-title {
+    color: #93c5fd;
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   TOMBOL CETAK
+========================= */
+
+.print-btn {
+    padding: 12px 22px;
+    background: white;
+    color: #1d4ed8;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    flex-shrink: 0;
+}
+
+.print-btn:hover {
+    background: #dbeafe;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   KONTEN UTAMA
+========================= */
+
+.container {
+    max-width: 1000px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: white;
+    padding: 28px;
+    margin-bottom: 22px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.06);
+}
+
+.card h2 {
+    color: #1d4ed8;
+    font-size: 22px;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #dbeafe;
+}
+
+.card h3 {
+    color: #0f172a;
+    font-size: 17px;
+    margin-bottom: 4px;
+}
+
+.card p {
+    margin-bottom: 8px;
+}
+
+/* =========================
+   PENDIDIKAN & PENGALAMAN
+========================= */
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 22px;
+}
+
+.item:last-child {
+    margin-bottom: 0;
+}
+
+.item ul {
+    padding-left: 20px;
+    margin-top: 8px;
+}
+
+.date {
+    color: #2563eb;
+    font-weight: bold;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+/* =========================
+   KEAHLIAN
+========================= */
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills span {
+    background: #dbeafe;
+    color: #1d4ed8;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 6%;
+    }
+
+    .profile {
+        gap: 18px;
+    }
+
+    .profile-img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .profile-info h1 {
+        font-size: 25px;
+    }
+
+    .job-title {
+        font-size: 17px;
+    }
+
+    .print-btn {
+        width: 100%;
+    }
+
+    .container {
+        margin: 20px auto;
+        padding: 0 14px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .item {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profile-info h1 {
+        font-size: 23px;
+    }
+
+    .card h2 {
+        font-size: 20px;
+    }
+
+    .skills {
+        gap: 8px;
+    }
+
+    .skills span {
+        font-size: 13px;
+        padding: 7px 12px;
+    }
+}
+
+/* =========================
+   CETAK CV
+========================= */
+
+@media print {
+    body {
+        background: white;
+        color: #000;
+        font-size: 11pt;
+    }
+
+    .hero {
+        background: #10243a !important;
+        color: white !important;
+        padding: 20px;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .print-btn {
+        display: none;
+    }
+
+    .container {
+        max-width: 100%;
+        margin: 15px 0;
+        padding: 0;
+    }
+
+    .card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        padding: 18px;
+        margin-bottom: 12px;
+        break-inside: avoid;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}

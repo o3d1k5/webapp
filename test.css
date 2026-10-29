@@ -1,0 +1,100 @@
+
+/* Pengaturan halaman */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e9eef5;
+
+    /* Background image seluruh halaman */
+    background-image: url(
+        "https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
+    );
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Kartu profil */
+.profile-card {
+    width: 350px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Background image bagian atas profil */
+.profile-header {
+    height: 150px;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+        ),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
+
+    background-size: cover;
+    background-position: center;
+}
+
+/* Isi profil */
+.profile-content {
+    padding: 0 25px 30px;
+}
+
+/* Foto profil */
+.profile-picture {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    margin-top: -55px;
+    position: relative;
+}
+
+/* Nama */
+h1 {
+    font-size: 25px;
+    color: #263238;
+    margin-bottom: 5px;
+}
+
+/* Pekerjaan */
+h3 {
+    color: #3498db;
+    margin-top: 5px;
+}
+
+/* Deskripsi */
+p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Tombol sosial media */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    text-decoration: none;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+.social-links a:hover {
+    background-color: #21618c;
+}
